@@ -1,5 +1,5 @@
 body {
-  margin: 40px;
+  margin: 10px;
   background-color: rgb(102, 145, 130);
   font-family: "Courier New", Courier, monospace;
   color: rgb(44, 42, 42);
@@ -12,6 +12,7 @@ main {
 .grid {
   display: grid;
   grid-gap: 5px;
+  margin: 0 auto;
   grid-template-areas:
     "header header navigation"
     "text text navigation"
@@ -25,6 +26,12 @@ main {
   text-align: left;
   font-style: italic;
   text-transform: uppercase;
+  border-top-left-radius: 180px;
+  border-bottom-right-radius: 180px;
+  border-bottom: solid;
+}
+h1 {
+  text-transform: uppercase;
 }
 .navigation {
   grid-area: navigation;
@@ -33,15 +40,15 @@ main {
   border-radius: 15px;
   text-transform: uppercase;
   text-align: right;
-  
 }
 
 .intro {
   grid-area: intro;
-  color: rgb(80, 8, 8);
-  background-color: rgb(180, 192, 206);
+  color: rgb(43, 4, 4);
+  background: linear-gradient(rgb(5, 44, 31), white);
   text-align: center;
-  font-size: 30px;
+  font-size: 24px;
+  font-weight: bold;
   border-top-right-radius: 180px;
   border-bottom-left-radius: 180px;
   border-bottom: solid;
@@ -49,15 +56,15 @@ main {
 
 .text {
   grid-area: text;
-  background-color: azure;
+  background-color: transparent;
   height: 100px;
-  padding-right: 30px;
-  font-size: 28px;
+  padding-right: 20px;
+  font-size: 24px;
   font-style: italic;
   border-top-left-radius: 180px;
   border-bottom-right-radius: 180px;
   border-bottom: solid;
-  text-align: center;
+  text-align: left;
 }
 .footer {
   grid-area: footer;
@@ -77,10 +84,11 @@ main {
   border-bottom: solid;
   text-align: left;
   border-radius: 25px;
+  background: linear-gradient(rgb(5, 44, 31), white);
 }
 .resume {
   grid-area: resume;
-  background-color: aliceblue;
+  background: linear-gradient(rgb(5, 44, 31), white);
   border-bottom: solid;
   text-align: left;
   border-radius: 25px;
@@ -103,22 +111,24 @@ main {
   background-color: lightsteelblue;
 }
 
-  
- 
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
-  
-  .container .content{
-    position: absolute;
-    bottom: 0;
-    background: rgb(0, 0, 0); /* Fallback color */
-    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-    color: #f1f1f1;
-    width: 100%;
-    padding: 20px;
-  }
-  .images{
-    border: none;
-    background-color: transparent;
-    padding: 2px;
-  }
- 
+.project {
+  flex: 1;
+}
+.notes1 .notes2 .notes3 .notes4 {
+  flex: 50%;
+}
+img {
+  float: left;
+  width: 200px;
+  height: 150px;
+}
+.container > p {
+  margin-top: 0;
+  padding: 0;
+}
