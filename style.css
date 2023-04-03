@@ -1,78 +1,124 @@
 body {
-    margin: 40px;
-    background-color: rgb(102, 145, 130);
-    font-family:'Courier New', Courier, monospace;
-    color: rgb(44, 42, 42);
-    
-  }
-  main {
-    min-height: 100vh;
-    padding: 50px 20px 50px;
-  }
- .header {
-    grid-area: header;
-    font-size: 40px;
-    text-align: left;
-    font-style: italic;
-    text-transform: uppercase;  
- }
+  margin: 40px;
+  background-color: rgb(102, 145, 130);
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(44, 42, 42);
+}
+main {
+  min-height: 100vh;
+  padding: 50px 20px 50px;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-areas:
+    "header header navigation"
+    "text text navigation"
+    "intro intro intro"
+    "notes resume resume"
+    "footer footer footer";
+}
+.header {
+  grid-area: header;
+  font-size: 40px;
+  text-align: left;
+  font-style: italic;
+  text-transform: uppercase;
+}
 .navigation {
-    grid-area: navigation;
-    background-color:azure;
-    font-size:18px; 
-    border-top-right-radius: 100px;
-    border-bottom-left-radius: 100px;
-    border-bottom: solid;
-    text-transform: uppercase; 
-    text-align:center;
-  }
- 
+  grid-area: navigation;
+  background-color: transparent;
+  font-size: 18px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  text-align: right;
+  
+}
+
 .intro {
-    grid-area: intro;
-    color:rgb(80, 8, 8);
-    background-color: rgb(180, 192, 206);
-    text-align: center;
-    font-size: 30px;
-    border-top-right-radius: 180px;
-    border-bottom-left-radius: 180px;
-    border-bottom: solid; 
+  grid-area: intro;
+  color: rgb(80, 8, 8);
+  background-color: rgb(180, 192, 206);
+  text-align: center;
+  font-size: 30px;
+  border-top-right-radius: 180px;
+  border-bottom-left-radius: 180px;
+  border-bottom: solid;
 }
 
 .text {
-    grid-area: text;
-    background-color:azure;
-    height: 100px;
-    padding-right: 30px;
-    font-size:28px;
-    font-style: italic;
-    border-top-left-radius: 180px;
-    border-bottom-right-radius: 180px;
-    border-bottom: solid; 
-    text-align: center;
-   
+  grid-area: text;
+  background-color: azure;
+  height: 100px;
+  padding-right: 30px;
+  font-size: 28px;
+  font-style: italic;
+  border-top-left-radius: 180px;
+  border-bottom-right-radius: 180px;
+  border-bottom: solid;
+  text-align: center;
 }
 .footer {
-    grid-area: footer;
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom: solid;
-    text-align: center;
-    padding: 1rem;
-  
+  grid-area: footer;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom: solid;
+  text-align: center;
+  padding: 1rem;
 }
-.grid {
-    display: grid;
-    grid-gap: 5px;
-    grid-template-areas:
-    "header header navigation"
-     "text text navigation"
-     "intro intro intro"
-     "footer footer footer";
-     }
-     .notes{
-        font-size: 18px;
-     }
 
- 
+.notes .resume {
+  font-size: 18px;
+}
+.notes {
+  grid-area: notes;
+  background-color: aliceblue;
+  border-bottom: solid;
+  text-align: left;
+  border-radius: 25px;
+}
+.resume {
+  grid-area: resume;
+  background-color: aliceblue;
+  border-bottom: solid;
+  text-align: left;
+  border-radius: 25px;
+}
+
+.exp {
+  font-style: oblique;
+  background-color: bisque;
+}
+.tech {
+  font-style: oblique;
+  background-color: bisque;
+}
+.soft {
+  font-style: oblique;
+  background-color: lightsteelblue;
+}
+.edu {
+  font-style: oblique;
+  background-color: lightsteelblue;
+}
+
   
+ 
 
+  
+  .container .content{
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
+  .images{
+    border: none;
+    background-color: transparent;
+    padding: 2px;
+  }
+ 
