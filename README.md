@@ -16,4 +16,6 @@ Hiring Managers/Recruiters/Anyone who is looking for a fresh team member
 ## License
 
 ## Technology 
-1. 
+1. HTML
+2. CSS
+3. JavaScript
